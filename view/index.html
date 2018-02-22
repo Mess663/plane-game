@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ballGame</title>
+    <link rel="stylesheet" href="../view/css/index.css">
+    <!-- 游戏基本配置（数据、工具、操作） -->
+    <script src="js/game/data.js"></script>
+    <script src="js/game/utils.js"></script>
+    <script src="js/game/game.js"></script>
+    <!-- 角色 -->
+    <script src="js/gameSrc/planeGame/role/myPlane.js"></script>
+    <script src="js/gameSrc/planeGame/role/bullet.js"></script>
+    <script src="js/gameSrc/planeGame/role/enemy.js"></script>
+    <script src="js/gameSrc/planeGame/role/partical.js"></script>
+    <!-- 场景 -->
+    <script src="js/game/sence.js"></script>
+    <script src="js/gameSrc/planeGame/scene/planeSceneStart.js"></script>
+    <script src="js/gameSrc/planeGame/scene/planeSceneEnd.js"></script>
+    <script src="js/gameSrc/planeGame/scene/planeScene.js"></script>
+    <!-- 运行 -->
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <canvas id="main" width="600" height="550"></canvas>
+    <ul class="controller">
+        <h4>速度控制器</h4>
+        <li>
+            bullet：<input type="range" value="" data-speed="controller.bullet" min="1" max="10">
+        </li>
+        <li>杀敌数：<span id="kill" data-kill="controller.kill">0</span></li>
+    </ul>
+    <ul>
+        <li>上下左右分别为w,s,a,d；</li>
+        <li>暂停开始键为f：</li>
+    </ul>
+    
+
+    <script>
+        function a() {
+            console.log(arguments)
+            console.log([].slice.apply(arguments))
+            console.log([].slice.call(arguments))
+        }
+
+        a(1,2,3)
+    </script>
+</body>
+</html>
